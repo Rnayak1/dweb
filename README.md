@@ -5,7 +5,7 @@
 # How to use :
   - install node.js
   - install dependencies
-  - Port will be :100
+  - Running address will be 127.0.0.1:100
 
 # Directory Structure
  - bin
