@@ -1,0 +1,93 @@
+
+/* css for laptops and above */
+@media only screen and (min-width: 768px)
+{
+	body
+	{
+		width:95%;
+		margin-left: 2.5%;
+		background: rgba(255,122,11,0.4);
+	}
+	nav
+	{
+		height: 70px;
+		justify-content: center;
+	}
+	.navbar-header
+	{
+		width : 30%;
+		display: flex;
+	}
+	#title
+	{
+		margin-top: 6%;
+	}
+	.dropdown:hover > .dropdown-menu
+	{
+		display: block;
+	}
+	.dropdown-menu > li
+	{
+		height:30px;
+		border: 1px solid black;
+		border-radius: 7px;
+	}
+	.dropdown-menu
+	{
+		position: absolute;
+	}
+	.dropdown-menu > li a:hover
+	{
+		background: black;
+		color: cornsilk;
+		font-weight: bold;
+	}
+	#lbox
+	{
+		float: left;
+		width: 15%;
+		margin-top: 5%;
+		margin-left: 2.5%;
+	}
+	.opti
+	{
+		font-size: 1em;
+		font-weight: bold;
+		list-style: none;
+		line-height: 2em;
+		border-bottom: 1px solid black;
+		margin-top: 1%;
+	}
+	.opti:hover
+	{
+		background: #808080b3;
+		cursor:alias;
+	}
+	.opti a:hover
+	{
+		cursor: alias;
+		color: cornsilk;
+	}
+}
+/*  css for tablets and mobile */
+@media only screen and (max-width: 767px)
+{
+	#lbox
+	{
+		display: none;
+	}
+}
+
+/* global css */
+
+/*    css for floating button   */
+
+#datamodal
+{
+	height: 40px;
+	position: fixed;
+	right: 5%;
+	bottom: 5%;
+	border-radius: 10px;
+	width: 40px;
+}

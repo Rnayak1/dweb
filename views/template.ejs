@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title><%= title %></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/stylesheets/bootstrap.min.css">
+  <script src="/javascripts/jquery.js"></script>
+  <script src="/javascripts/bootstrap.js"></script>
+  <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+ 
+	<link rel="stylesheet" type="text/css" href="/stylesheets/<%= cssa %>.css" >	
+  
+</head>
+
+  <body>
+  	<nav class="navbar navbar-default">
+  		<div class="navbar-header">
+  			<a href="/" class="navbar-brand">
+  				<img src="/images/logo.png" style="max-height: 50px;">
+  			</a>
+  			<h4 id="title">Department of Computer Science</h4>
+  			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+  		</div>
+  		<div class="collapse navbar-collapse header-nav navbar-right" id="navigation">
+  			<ul class="nav navbar-nav">
+  				<li class="text-center">
+  					<a href="/">Home</a>
+  				</li>
+  				<li class="text-center dropdown">
+  					<a href="#" data-toggle="dropdown" class="dropdown-toggle">Acedmics
+  						<span class="caret"></span>
+  					</a>
+  					<ul class="dropdown-menu">
+  						<li class="text-center"><a href="#">PHD</a></li>
+  						<li class="text-center"><a href="#">MCA</a></li>
+  						<li class="text-center"><a href="#">MSc.</a></li>
+  						<li class="text-center"><a href="#">BSc. CS(H)</a></li>
+  						<li class="text-center"><a href="#">UG SYllabus</a></li>
+  					</ul>
+  				</li>
+  				<li class="text-center dropdown">
+  					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+  						Research
+  						<span class="caret"></span>
+  					</a>
+  					<ul class="dropdown-menu">
+  						<li class="text-center"><a href="#">Pre-PHD Course work</a></li>
+  						<li class="text-center"><a href="#">Research Areas</a></li>
+  						<li class="text-center"><a href="#">Guidelines and Ordinance</a></li>
+  						<li class="text-center"><a href="#">UGC Approved Journals</a></li>
+  						<li class="text-center"><a href="#">Research Supervisors</a></li>
+  						<li class="text-center"><a href="#">Examination Form</a></li>
+  					</ul>
+  				</li>
+  				<li class="text-center dropdown">
+  					<a href="/" class="dropdown-toggle" data-toggle="dropdown">
+  						Student Corner
+  						<span class="caret"></span>
+  					</a>
+  					<ul class="dropdown-menu">
+  						<li class="text-center"><a href="#">Scholarships</a></li>
+  						<li class="text-center"><a href="#">Forms</a></li>
+  						<li class="text-center"><a href="#">Mentors</a></li>
+  						<li class="text-center"><a href="#">Plcaments</a></li>
+  						<li class="text-center"><a href="#">DUCS Connect</a></li>
+  					</ul>
+  				</li>
+  				<li class="text-center dropdown">
+  					<a href="/" class="dropdown-toggle" data-toggle="dropdown">
+  						Events
+  						<span class="caret"></span>
+  					</a>
+  					<ul class="dropdown-menu">
+  						<li class="text-center"><a href="#">Sankalan</a></li>
+  						<li class="text-center"><a href="#">Workshops</a></li>
+  						<li class="text-center"><a href="#">Green Drives</a></li>
+  						<li class="text-center"><a href="#">For Humanity</a></li>
+  					</ul>
+  				</li>
+  			</ul>
+  		</div>
+  	</nav>
+  	<div id="lbox">
+		<% if(opti.length)
+			opti.forEach(function(o){
+		%>
+		<li class="opti"> 
+			<a href=""><%= o.op %></a></li>
+		<%}) %>
+    </div>
+    <%- include(page) %>    
+    <button data-toggle="modal" class="btn btn-danger" data-target="#data" id="datamodal">	
+    	<img src="./images/bars-solid.svg">
+    </button>
+    <div id="data" class="modal fade" role="dialog">
+    	<div class="modal-dialog">
+    		<div class="modal-content">
+    			<div class="modal-header">
+    				<button data-dismiss="modal" class="close" >&times</button>
+    			</div>
+    			<div class="modal-body">
+    				<% if(opti.length)
+    					 opti.forEach(function(o)
+    				{%>
+    					<li> <%= o.op %></li>
+    				<%}) %>
+    			</div>
+    		</div>
+    	</div>    	
+    </div>
+  </body>
+</html>
