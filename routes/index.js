@@ -14,6 +14,6 @@ router.get('/', function(req, res, next) {
   res.render('template', { title: 'DUCS',page:'index',opti:opt,cssa:'index'});
 });
 router.get('/HOD_message',function(req,res){
-	res.render('template',{title:'HOD Message',page:'HOD_message',opti:opt,cssa:'hod'});
+	res.render('template',{title:'HOD_Message',page:'HOD_message',opti:opt,cssa:'hod'});
 })
 module.exports = router;
