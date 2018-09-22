@@ -87,12 +87,12 @@
   		</div>
   	</nav>
   	<div id="lbox">
-		<% if(opti.length)
-			opti.forEach(function(o){
-		%>
-		<li class="opti"> 
-			<a href=""><%= o.op %></a></li>
-		<%}) %>
+  		<% if(opti.length)
+  			opti.forEach(function(o){
+  		%>
+  		<li class="opti"> 
+  			<a href=""><%= o.op %></a></li>
+  		<%}) %>
     </div>
     <%- include(page) %>    
     <button data-toggle="modal" class="btn btn-danger" data-target="#data" id="datamodal">	
