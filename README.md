@@ -12,7 +12,7 @@
    - www
  - node_modules
  - Public 
-   - docs
+   - documents
    - images
    - javascripts
    - stylesheets
