@@ -1,6 +1,6 @@
 # Department Website
 
-  NODE with EJS
+  NODE with EJS Embedded JavaScript templating
 
 # How to use :
   - install node.js
